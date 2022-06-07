@@ -34,7 +34,7 @@ public func setupLogFolder(_ info: (domain: String, appName: String)) -> URL? {
   return createAsNeeded(info.domain + "." + info.appName + "/Logs")
 }
 
-public func log(_ msg: String, _ level: LogLevel, _ file: StaticString, _ function: StaticString, _ line: Int) {
+public func log(_ msg: String, _ level: LogLevel, _ function: StaticString, _ file: StaticString, _ line: Int) {
   NotificationCenter.default.post(name: logEntryNotification, object: LogEntry(msg, level, function, file, line))
   if level == .warning || level == .error {
     NotificationCenter.default.post(name: logAlertNotification, object: LogEntry(msg, level, function, file, line))
