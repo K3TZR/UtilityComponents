@@ -20,9 +20,13 @@ public let kRemoved = "removed"
 // ----------------------------------------------------------------------------
 // MARK: - Notifications
 
-public let logEntryNotification = NSNotification.Name(rawValue: "LogEntry")
+public let clientNotification = NSNotification.Name(rawValue: "ClientUpdate")
 public let logAlertNotification = NSNotification.Name(rawValue: "LogAlert")
+public let logEntryNotification = NSNotification.Name(rawValue: "LogEntry")
+public let meterNotification = NSNotification.Name(rawValue: "MeterUpdate")
+public let packetNotification = NSNotification.Name(rawValue: "PacketUpdate")
 public let testNotification = NSNotification.Name(rawValue: "TestResult")
+public let wanNotification = NSNotification.Name(rawValue: "WanStatus")
 
 // ----------------------------------------------------------------------------
 // MARK: - Structs & Enums
